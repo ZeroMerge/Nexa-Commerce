@@ -1,0 +1,176 @@
+/* Component Classes based on Flup Light Mode */
+
+/* App Layout Structure */
+.app-layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: var(--bg-color);
+}
+
+.app-sidebar-nav {
+  width: 72px;
+  background-color: var(--surface-color);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: var(--space-6);
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.app-sidebar-sub {
+  width: 220px;
+  background-color: var(--surface-color);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 10px 0 20px -10px rgba(0,0,0,0.02);
+  z-index: 9;
+  flex-shrink: 0;
+}
+
+.app-content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.app-header {
+  height: 72px;
+  background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-8);
+  justify-content: space-between;
+}
+
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 var(--space-8) var(--space-8) var(--space-8);
+}
+
+/* Card & Surface Surfaces */
+.surface-card {
+  background-color: var(--surface-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-6);
+  border: 1px solid rgba(0,0,0,0.02);
+}
+
+.surface-elevated {
+  background-color: var(--surface-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+/* Interactive Elements & States */
+.interactive-item {
+  transition: all var(--trans-micro);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+}
+
+.interactive-item:hover {
+  background-color: var(--surface-subtle);
+}
+
+.interactive-item.selected {
+  background-color: rgba(5, 150, 105, 0.08); /* Light Green bg */
+  color: var(--primary-green);
+  font-weight: 500;
+}
+
+/* Base Button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  transition: all var(--trans-micro);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--primary-green);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #047857; 
+}
+
+.btn-secondary {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover {
+  background-color: var(--surface-subtle);
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: var(--text-primary);
+  padding: var(--space-2);
+}
+
+.btn-ghost:hover {
+  background-color: var(--surface-subtle);
+}
+
+/* Status Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px var(--space-3);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-body-sm);
+  font-weight: 600;
+}
+
+.badge-green { background-color: rgba(5, 150, 105, 0.1); color: var(--primary-green); }
+.badge-blue { background-color: rgba(59, 130, 246, 0.1); color: var(--primary-blue); }
+.badge-amber { background-color: rgba(249, 115, 22, 0.1); color: var(--primary-orange); }
+.badge-red { background-color: rgba(239, 68, 68, 0.1); color: var(--primary-red); }
+.badge-neutral { background-color: var(--surface-subtle); color: var(--text-secondary); }
+
+/* Table */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th {
+  text-align: left;
+  padding: var(--space-3) var(--space-4);
+  color: var(--text-secondary);
+  font-weight: 500;
+  border-bottom: 1px solid var(--border-color);
+  font-size: var(--text-body-sm);
+}
+
+.data-table td {
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: var(--text-body);
+}
+
+.data-table tbody tr {
+  transition: background-color var(--trans-micro);
+}
+
+.data-table tbody tr:hover {
+  background-color: var(--surface-subtle);
+}

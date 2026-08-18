@@ -1,0 +1,34 @@
+{
+  "name": "nexa-commerce",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:v1": "vite --mode v1",
+    "dev:v2": "vite --mode v2",
+    "build": "tsc -b && vite build",
+    "build:v1": "tsc -b && vite build --mode v1",
+    "build:v2": "tsc -b && vite build --mode v2",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "preview:v1": "vite preview --mode v1",
+    "preview:v2": "vite preview --mode v2"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.32.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.4",
+    "cross-env": "^10.1.0",
+    "oxlint": "^1.75.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.2.0"
+  }
+}
